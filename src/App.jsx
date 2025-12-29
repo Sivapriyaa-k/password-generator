@@ -47,7 +47,7 @@ function App() {
               setNumberAllowed((prev) => !prev);
             }}
           />
-          <label htmlFor="length"> length:{length}</label>
+          <label htmlFor="number"> numbers</label>
         </div>
       </div>
     </div>
