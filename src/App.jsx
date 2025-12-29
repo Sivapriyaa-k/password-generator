@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
 
+  const generatePassword = useCallback(() => {});
   return (
     <div className="w-full max-w-md mx-auto shadow-md-rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-3xl font-bold py-5 text-center text-white">
