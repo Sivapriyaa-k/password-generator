@@ -49,6 +49,18 @@ function App() {
           />
           <label htmlFor="number"> numbers</label>
         </div>
+        <div className="flex items-center gap-x-1">
+          <input
+            type="checkbox"
+            defaultChecked={charAllowed}
+            name=""
+            id=""
+            onChange={() => {
+              setCharAllowed((prev) => !prev);
+            }}
+          />
+          <label htmlFor="charInput">Character</label>
+        </div>
       </div>
     </div>
   );
