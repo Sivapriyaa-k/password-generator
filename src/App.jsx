@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -14,7 +14,22 @@ function App() {
     if (numberAllowed) {
       str += "1234567890";
     }
-  });
+
+    if (charAllowed) {
+      str += "!@#$%^&*()_+";
+    }
+
+    for (let i = 0; i < length; i++) {
+      const char = Math.floor(Math.random() * str.length + 1);
+      pass += str.charAt(char);
+    }
+
+    setPassword(pass);
+  }, [length, charAllowed, numberAllowed]);
+
+  useEffect(() => {
+    generatePassword();
+  }, [length, numberAllowed, charAllowed]);
   return (
     <div className="w-full max-w-md mx-auto shadow-md-rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-3xl font-bold py-5 text-center text-white">
