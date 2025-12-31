@@ -48,6 +48,8 @@ function App() {
           value={password}
           placeholder="Password"
           className="bg-white outline-none w-full py-1 px-3 text-gray-700"
+          readOnly
+          ref={passwordRef}
         />
         <button
           onClick={copyPasswordToClipboard}
